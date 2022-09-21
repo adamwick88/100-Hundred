@@ -36,8 +36,10 @@ module.exports = {
         image: result.secure_url,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
+        ingredients: req.body.ingredients,
         likes: 0,
         user: req.user.id,
+        restaurants:req.body.restaurants
       });
       console.log("Post has been added!");
       res.redirect("/profile");

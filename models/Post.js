@@ -17,6 +17,16 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ingredients:{
+    type: String,
+    required: true,
+  },
+
+  restaurants: {
+    type: String,
+    allowedValues: ['PizzaHut', 'TacoBell', 'Mcdonalds']
+  },
+
   likes: {
     type: Number,
     required: true,
