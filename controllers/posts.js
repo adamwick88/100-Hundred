@@ -37,7 +37,7 @@ module.exports = {
     }
   },
 
-  
+
 
   getTacoBell: async (req, res) => {
     try {
@@ -56,6 +56,33 @@ module.exports = {
     }
   },
 
+
+
+  getoliveGarden: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "OliveGarden" })
+      res.render("oliveGarden.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getchickfila: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "ChickFila" })
+      res.render("chickfila.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  getstarbucks: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "StarBucks" })
+      res.render("starbucks.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
 
   getPost: async (req, res) => {
     try {

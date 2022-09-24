@@ -14,6 +14,9 @@ router.get("/menu", ensureAuth, postsController.getMenu)
 router.get("/mcDonalds", ensureAuth,postsController.getMcdonalds)
 router.get("/pizzaHut", ensureAuth,postsController.getPizzaHut)
 router.get("/tacoBell", ensureAuth,postsController.getTacoBell)
+router.get("/chickfila", ensureAuth,postsController.getchickfila)
+router.get("/oliveGarden", ensureAuth,postsController.getoliveGarden)
+router.get("/starbucks", ensureAuth,postsController.getstarbucks)
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);

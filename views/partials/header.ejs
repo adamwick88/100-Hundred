@@ -1,30 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Binary Upload Boom</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <header class="container">
-      <div class="text-center">
-        <h1 class=""><a href="/profile">Copy Cat Recipes</a></h1>
-        <span>A social network site for fast-food fans</span>
-      </div>
-          
-      <main class="main">
-        <img src="images/clipart1256.png" width="200" alt="">
-        <h1>Welcome!</h1>
-        <p>Deliciousness jumping into the mouth</p>
-        <form class="search" action="/get/getRecipe" method="GET">
-            <input class="bar" type="text" placeholder="Search Restaurant..." name="resName">
-            <button><i class="fas fa-search"></i></button>
-        </form>
-    </main>
-    </header>
-  </body>
-</html>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="C:\Users\adamw\Downloads\Copy-Cat-Recipe-main\public\css\style.css">
+
+<div class="navbar bg-neutral text-neutral-content">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li tabindex="0">
+          <a class="justify-between">
+            Parent
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost normal-case text-xl">Copy-Cat Recipes</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal p-0">
+      <li><a href="/profile">Add a Recipe</a></li>
+      <li tabindex="0">
+       
+        <ul class="p-2">
+          <li><a>Submenu 1</a></li>
+          <li><a>Submenu 2</a></li>
+        </ul>
+      </li>
+      <li><a href="/feed">Feed</a></li>
+      <li><a href="/menu">Menu</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn" href="/logout">Logout</a>
+  </div>
+</div>

@@ -24,7 +24,7 @@ const PostSchema = new mongoose.Schema({
 
   restaurants: {
     type: String,
-    allowedValues: ['PizzaHut', 'TacoBell', 'Mcdonalds']
+    allowedValues: ['PizzaHut', 'TacoBell', 'Mcdonalds', 'OliveGarden', 'ChickFila', 'Starbucks']
   },
 
   likes: {

@@ -2,10 +2,11 @@
 <%- include('partials/header') -%>
 
 <% for(var i=0; i<posts.length; i++) {%>
-  <section class="mb-32 text-gray-800 text-center">  
- <div class="container my-24 px-6 mx-auto">
-  <div class = "mb-12">
+
+
 <div class="card w-96 bg-base-100 shadow-xl">
+  
+  
   <figure class="px-10 pt-10">
     <img src="<%= posts[i].image%>" alt="Shoes" class="rounded-xl" />
   </figure>
@@ -17,9 +18,8 @@
     </div>
   </div>
 </div>
-  </div>
 </div>
-</section>
+
 <% } %>
 
 <%- include('partials/footer') -%>
