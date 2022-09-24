@@ -10,6 +10,10 @@ router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
 router.get("/login", authController.getLogin);
+router.get("/menu", ensureAuth, postsController.getMenu)
+router.get("/mcDonalds", ensureAuth,postsController.getMcdonalds)
+router.get("/pizzaHut", ensureAuth,postsController.getPizzaHut)
+router.get("/tacoBell", ensureAuth,postsController.getTacoBell)
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);

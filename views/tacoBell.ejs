@@ -1,0 +1,22 @@
+
+<%- include('partials/header') -%>
+
+ 
+<% for(var i=0; i<posts.length; i++) {%>
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img src="<%= posts[i].image%>" alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title"><%= posts[i].title %></h2>
+    <p><%= posts[i].caption %></p>
+    <div class="card-actions">
+      <button class="btn btn-primary"> <a href="/post/<%= posts[i]._id%>"> Recipe</button>
+    </div>
+  </div>
+</div>
+
+
+<% } %>
+
+<%- include('partials/footer') -%>

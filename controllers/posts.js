@@ -18,6 +18,45 @@ module.exports = {
       console.log(err);
     }
   },
+
+  getMenu: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "Mcdonalds" })
+      res.render("menu.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  getMcdonalds: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "Mcdonalds" })
+      res.render("mcDonalds.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  
+
+  getTacoBell: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "TacoBell" })
+      res.render("tacoBell.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getPizzaHut: async (req, res) => {
+    try {
+      const posts = await Post.find({ restaurants: "PizzaHut" })
+      res.render("pizzaHut.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);

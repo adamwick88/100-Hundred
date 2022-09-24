@@ -13,8 +13,9 @@
            <h2 class="card-title"> <%= posts[i].title %></h3>
             <div class="badge badge-secondary">NEW</div>
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-              <p><%= posts[i].caption%></p>
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src=<%= posts[i].image%> alt="Shoes"/></figure>
+              <p></p>
               <div class="card-actions justify-end">
                 <div class="badge badge-outline">Fashion</div> 
                 <div class="badge badge-outline">Products</div>
@@ -31,12 +32,13 @@
     <div class="card-body">
       <h2 class="card-title">
         Shoes!
-        <div class="badge badge-secondary">NEW</div>
+        <ul class="badge badge-secondary">NEW</ul>
       </h2>
       <p>If a dog chews shoes whose shoes does he choose?</p>
       <div class="card-actions justify-end">
-        <div class="badge badge-outline">Fashion</div> 
-        <div class="badge badge-outline">Products</div>
+        <li class="badge-outline">Fashion</li> 
+        <li class="badge-outline">Products</div>
+      </ul>
       </div>
     </div>
   </div>
