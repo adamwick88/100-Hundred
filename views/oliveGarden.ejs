@@ -1,21 +1,18 @@
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
 
 <%- include('partials/header') -%>
 
 <% for(var i=0; i<posts.length; i++) {%>
 
-	
-<div class="flex justify-start ...">
+
 <div class="card w-96 bg-base-100 shadow-xl">
   
-
+  
   <figure class="px-10 pt-10">
     <img src="<%= posts[i].image%>" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title"><%= posts[i].title %></h2>
-    <p><%= posts[i].caption %></p>
+    <p>Visit recipe to learn more</p>
     <div class="card-actions">
       <button class="btn btn-primary"> <a href="/post/<%= posts[i]._id%>"> Recipe</button>
     </div>
@@ -23,6 +20,6 @@
 </div>
 </div>
 
-
 <% } %>
+
 <%- include('partials/footer') -%>

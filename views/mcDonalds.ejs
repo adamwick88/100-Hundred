@@ -1,45 +1,25 @@
+
 <%- include('partials/header') -%>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
+<% for(var i=0; i<posts.length; i++) {%>
+
+
+<div class="card w-96 bg-base-100 shadow-xl">
   
-
-    
-
-  <div class="card w-96 bg-base-100 shadow-xl">
-    <div class="card-body">
-      <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-           <h2 class="card-title"> <%= posts[i].title %></h3>
-            <div class="badge badge-secondary">NEW</div>
-            <a href="/post/<%= posts[i]._id%>">
-              <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src=<%= posts[i].image%> alt="Shoes"/></figure>
-              <p></p>
-              <div class="card-actions justify-end">
-                <div class="badge badge-outline">Fashion</div> 
-                <div class="badge badge-outline">Products</div>
-              </div>
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        </div>
-    </div>
-  </div>  
-  <div class="card w-96 bg-base-100 shadow-xl">
-    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        Shoes!
-        <ul class="badge badge-secondary">NEW</ul>
-      </h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div class="card-actions justify-end">
-        <li class="badge-outline">Fashion</li> 
-        <li class="badge-outline">Products</div>
-      </ul>
-      </div>
+  
+  <figure class="px-10 pt-10">
+    <img src="<%= posts[i].image%>" alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title"><%= posts[i].title %></h2>
+    <p>Visit recipe to learn more</p>
+    <div class="card-actions">
+      <button class="btn btn-primary"> <a href="/post/<%= posts[i]._id%>"> Recipe</button>
     </div>
   </div>
+</div>
+</div>
+
+<% } %>
+
 <%- include('partials/footer') -%>

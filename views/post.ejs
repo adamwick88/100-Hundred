@@ -1,45 +1,83 @@
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= post.title %></h2>
-      <h3><%= post.restaurants %></h3>
-      <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
-        <form
-          class="col-1"
-          action="/post/likePost/<%= post.id %>?_method=PUT"
-          method="POST"
-        >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
-        </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <%if(post.user == user.id){ %>
-        <form
-          action="/post/deletePost/<%= post.id %>?_method=DELETE"
-          method="POST"
-          class="col-3"
-        >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
-        </form>
-        <%}%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Starter Template - Minimal Blog: Tailwind Toolbox</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+  </head>
+
+
+
+			
+
+			
+
+	<!--Container-->
+	<div class="container w-full md:max-w-3xl mx-auto pt-20">
+
+		<div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+
+			<!--Title-->
+			<div class="font-sans">
+				<p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="/feed" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO Feed</a></p>
+						<h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"><%= post.title %></h1>
+						<p class="text-sm md:text-base font-normal text-gray-600"><% post.user %></p>
+			</div>
+
+
+			<!--Post Content-->
+
+
+			<!--Lead Para-->
+			<p class="py-6">
+				👋 Welcome Fellow Copy-Cats and aspiring chefs. This page has instructions for how to make your own version of your favorite foods. 
+			</p>
+      
+      <div class="justify-content: center">
+        <img class="" src=<%= post.image %>>
+        
       </div>
-    </div>
-    <div class="col-3 mt-5">
-      <h2>Instructions</h2>
-      <p><%= post.caption %></p>
-    </div>
-    <div class="col-3 mt-5">
-    
-      <h2>Ingredients</h2>
-      <p><%= post.ingredients %></p>
-    </div>
- 
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
-    </div>
+			<p class="py-6"><%= post.caption %></p>
+
+
+			<h1 class="py-2 font-sans"><%= post.ingredients %> </h1>
+			<h2 class="py-2 font-sans"><% %></h2>
+			<h3 class="py-2 font-sans"></h3>
+			<h4 class="py-2 font-sans"></h4>
+			<h5 class="py-2 font-sans"></h5>
+			<h6 class="py-2 font-sans"></h6>
+
+			<p class="py-6">  </p>
+      <form
+      class="col-1"
+      action="/post/likePost/<%= post.id %>?_method=PUT"
+      method="POST"
+    >
+      <button class="btn btn-primary fa fa-heart" type="submit"></button>
+    </form>
+    <h3 class="col-3">Likes: <%= post.likes %></h3>
+    <%if(post.user == user.id){ %>
+    <form
+      action="/post/deletePost/<%= post.id %>?_method=DELETE"
+      method="POST"
+      class="col-3"
+    >
+      <button class="btn btn-primary fa fa-trash" type="submit"></button>
+    </form>
+
   </div>
 </div>
+
+<%}%>
+  
+          
+
 
 <%- include('partials/footer') -%>

@@ -88,6 +88,7 @@ module.exports = {
     try {
       const post = await Post.findById(req.params.id);
       res.render("post.ejs", { post: post, user: req.user });
+      console.log(req.file.path)
     } catch (err) {
       console.log(err);
     }
