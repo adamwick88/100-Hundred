@@ -6,42 +6,35 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                   
                     <h2>Add your Recipe</h2>
-                <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-                <div class="mb-4">
-               <label for="title" class="ftext-xl text-gray-600">Title</label>
-              <input type="text" class="border-2 border-gray-300 p-2 w-full" id="title" name="title">
-                </div>
+                    <form action="/post/createPost" method="POST" id="createPostForm" name="createPostForm" enctype="multipart/form-data">
                         <div class="mb-4">
-                            <label for="ingredients" class="text-xl text-gray-600">Ingredients</label></br>
-                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="ingredients" id="ingredients" placeholder="(Optional)">
+                            <label for="title" class="ftext-xl text-gray-600">Title</label>
+                            <input type="text" class="border-2 border-gray-300 p-2 w-full" id="title" name="title">
+                        </div>
+                        <div class="mb-4">
+                            <label for="ingrediants" class="text-xl text-gray-600">Ingredients</label></br>
+                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="ingredients" id="ingredients" placeholder="(Optional)" form="createPostForm">
                         </div>
                         <div class="mb-8">
                             <label for="caption" label class="text-xl text-gray-600">Content <span class="text-red-500">*</span></label></br>
-                            <textarea name="content" id="caption" name="caption" class="border-2 border-gray-500">
-                                
-                            </textarea>
-                            
+                            <textarea id="caption" name="caption" class="border-2 border-gray-500" form="createPostForm"></textarea>
                         </div>
                         <div class="mb-3">
-                <label for ="restaurants">Restaurants</label>
-                <select name="restaurants" id="restaurants">
-                <option value="TacoBell">Taco Bell</option>
-                <option value="Mcdonalds">Mcdonalds</option>
-                <option value="PizzaHut">Pizza Hut</option>
-                <option value="OliveGarden">Olive Garden</option>
-                <option value="StarBucks">StarBucks</option>
-                <option value="ChickFila">Chick-Fil-A</option>
-              </select>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                        <label for ="restaurants">Restaurants</label>
+                        <select name="restaurants" id="restaurants" form="createPostForm">
+                          <option value="TacoBell">Taco Bell</option>
+                          <option value="Mcdonalds">Mcdonalds</option>
+                          <option value="PizzaHut">Pizza Hut</option>
+                          <option value="OliveGarden">Olive Garden</option>
+                          <option value="StarBucks">StarBucks</option>
+                          <option value="ChickFila">Chick-Fil-A</option>
+                        </select>
+                        <div class="mb-3">
+                          <label for="imageUpload" class="form-label">Image</label>
+                          <input type="file" class="form-control" id="imageUpload" name="file">
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="Upload" form="createPostForm">Submit</button>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'content' );
