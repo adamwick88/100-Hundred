@@ -1,68 +1,67 @@
 <%- include('partials/header') -%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tailwind Starter Template - Minimal Blog: Tailwind Toolbox</title>
-    <meta name="author" content="name" />
-    <meta name="description" content="description here" />
-    <meta name="keywords" content="keywords,here" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <!--Replace with your tailwind.css once created-->
-  </head>
+<div class="container my-24 px-6 mx-auto">
 
+  <!-- Section: Design Block -->
+  <section class="mb-32 text-gray-800">
+    <!-- Jumbotron -->
+    <div class="container mx-auto xl:px-32 text-center lg:text-left">
+      <div class="grid lg:grid-cols-2 flex items-center">
+        <div class="mb-12 lg:mb-0">
+          <div class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
+            style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)">
+            <h2 class="text-3xl font-bold mb-6"><%= post.title%></h2>
+            <p class="text-gray-500 mb-6 pb-2 lg:pb-0">
+              <%= post.ingredients%>
+            </p>
 
+            <div class="flex flex-col md:flex-row md:justify-around lg:justify-between mb-6 mx-auto">
+              <p class="flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                  <path fill="currentColor"
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                  </path>
+                </svg>
+                <%= post.ingredients%>
+              </p>
 
-			
+              <p class="flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                  <path fill="currentColor"
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                  </path>
+                </svg>
+                
+              </p>
 
-			
+              <p class="flex items-center mb-2 lg:mb-0 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                  <path fill="currentColor"
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                  </path>
+                </svg>
+                
+              </p>
+            </div>
 
-	<!--Container-->
-	<div class="container w-full md:max-w-3xl mx-auto pt-20">
+            <p class="text-gray-500 mb-0">
+              <%= post.caption%>
+            </p>
+          </div>
+        </div>
 
-		<div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
-
-			<!--Title-->
-			<div class="font-sans">
-				<p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="/feed" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO Feed</a></p>
-						<h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"><%= post.title %></h1>
-						<p class="text-sm md:text-base font-normal text-gray-600"><% post.user %></p>
-			</div>
-
-
-			<!--Post Content-->
-
-
-			<!--Lead Para-->
-			<p class="py-6">
-				👋 Welcome Fellow Copy-Cats and aspiring chefs. This page has instructions for how to make your own version of your favorite foods. 
-			</p>
-      
-      <div class="justify-content: left">
-        <img class="justify-content: center object-fit h-100 w-80 ..." src=<%= post.image %>>
-        
+        <div>
+          <img src="<%= post.image%>" class="w-full rounded-lg shadow-lg"
+            alt="" />
+        </div>
       </div>
-			<p class="py-6"><%= post.caption %></p>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
 
-
-			<h1 class="py-2 font-sans"><%= post.ingredients %> </h1>
-			<h2 class="py-2 font-sans"><% %></h2>
-			<h3 class="py-2 font-sans"></h3>
-			<h4 class="py-2 font-sans"></h4>
-			<h5 class="py-2 font-sans"></h5>
-			<h6 class="py-2 font-sans"></h6>
-
-			<p class="py-6">  </p>
-      <form
-      class="col-1"
-      action="/post/likePost/<%= post.id %>?_method=PUT"
-      method="POST"
-    >
-      <button class="btn btn-primary fa fa-heart" type="submit"></button>
-    </form>
-    <h3 class="col-3">Likes: <%= post.likes %></h3>
+</div>
+<!-- Container for demo purpose -->
     <%if(post.user == user.id){ %>
     <form
       action="/post/deletePost/<%= post.id %>?_method=DELETE"

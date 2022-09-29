@@ -4,7 +4,7 @@
 
 
 
-  <div class="grid grid-cols-3 gap-3 border-solid hover:border-dotted">
+  <div class="grid grid-cols-3 gap-5 border-solid hover:border-dotted">
    
 
     <% for(var i=0; i<posts.length; i++) {%>
@@ -16,12 +16,11 @@
   <div class="card-body  items-center text-center ">
     <h2 class="card-title">
       Shoes!
-      <div class="badge badge-secondary border-solid hover:border-dotted">NEW</div>
+      <div class=""></div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>Click on the recipe button to learn more</p>
     <div class="card-actions justify-end">
-      <div class="badge badge-outline">Fashion</div> 
-      <div class="badge badge-outline">Products</div>
+  <button class=""> <a href="/post/<%= posts[i]._id%>">Test</a></button>
     </div>
   </div>
 </div>
