@@ -15,12 +15,12 @@
 </figure>
   <div class="card-body  items-center text-center ">
     <h2 class="card-title">
-      Shoes!
+      <%= posts[i].title%>
       <div class=""></div>
     </h2>
     <p>Click on the recipe button to learn more</p>
     <div class="card-actions justify-end">
-  <button class=""> <a href="/post/<%= posts[i]._id%>">Test</a></button>
+  <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"> <a href="/post/<%= posts[i]._id%>">Recipe</a></button>
     </div>
   </div>
 </div>

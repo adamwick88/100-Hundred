@@ -1,25 +1,38 @@
 
 <%- include('partials/header') -%>
 
-<% for(var i=0; i<posts.length; i++) {%>
 
 
-<div class="card w-96 bg-base-100 shadow-xl">
-  
-  
-  <figure class="px-10 pt-10">
-    <img src="<%= posts[i].image%>" alt="Shoes" class="rounded-xl" />
-  </figure>
-  <div class="card-body items-center text-center">
-    <h2 class="card-title"><%= posts[i].title %></h2>
-    <p><%= posts[i].caption %></p>
-    <div class="card-actions">
-      <button class="btn btn-primary"> <a href="/post/<%= posts[i]._id%>"> Recipe</button>
-    </div>
+
+<div class="grid grid-cols-3 gap-5 border-solid hover:border-dotted">
+ 
+
+  <% for(var i=0; i<posts.length; i++) {%>
+    <div class="card w-96 bg-base-100 shadow-xl content-center ...">
+<figure class="px-10 pt-10 order-solid hover"> <a href="/post/<%= posts[i]._id%>">
+  <img class=" object-scale down h-48 w-full" src="<%= posts[i].image%>">
+</a>
+</figure>
+<div class="card-body  items-center text-center ">
+  <h2 class="card-title">
+    <%= posts[i].title%>
+    <div class=""></div>
+  </h2>
+  <p>Click on the recipe button to learn more</p>
+  <div class="card-actions justify-end">
+<button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"> <a href="/post/<%= posts[i]._id%>">Recipe</a></button>
   </div>
 </div>
 </div>
+  
+
+
+
 
 <% } %>
+</ul>
+</div>
+
 
 <%- include('partials/footer') -%>
+</div>
