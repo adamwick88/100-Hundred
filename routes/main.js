@@ -19,7 +19,7 @@ router.get("/oliveGarden", ensureAuth,postsController.getoliveGarden)
 router.get("/starbucks", ensureAuth,postsController.getstarbucks)
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
-router.get('/createProfile.ejs', ensureAuth, postsController.getcreateProfile)
+router.get("/createProfile", ensureAuth, postsController.getcreateProfile)
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 

@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const PersonalSchema = new mongoose.Schema({
   city: {
     type: String,
-    required: false,
+    required: true,
   },
   image: {
     type: String,
-    require: false,
+    require: true,
   },
   cloudinaryId: {
     type: String,
@@ -15,7 +15,7 @@ const PersonalSchema = new mongoose.Schema({
   },
   favoriteFastFood: {
     type: String,
-    required: false,
+    required: true,
   },
  
   likes: {
