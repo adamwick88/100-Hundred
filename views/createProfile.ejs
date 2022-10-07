@@ -5,8 +5,8 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
               
-                <h2>Update Profile</h2>
-                <form action="/profile/createProfile" method="POST" id="createProfile" name="createProfile" enctype="multipart/form-data">
+                <h2>Update profile</h2>
+                <form action="/profile/createProfile/<%= posts._id%>" method="POST" id="createProfile" name="createProfile" enctype="multipart/form-data">
                     <div class="mb-4">
                         <label for="city" class="ftext-xl text-gray-600">City</label>
                         <input type="text" class="border-2 border-gray-300 p-2 w-full" id="city" name="city">

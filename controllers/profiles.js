@@ -17,7 +17,7 @@ module.exports = {
          
         });
         console.log("Profile has been updated.");
-        res.redirect("/post/");
+        res.redirect("/post/"+req.params.id);
       } catch (err) {
         console.log(err);
       }
